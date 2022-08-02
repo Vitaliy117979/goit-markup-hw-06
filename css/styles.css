@@ -279,9 +279,7 @@ a {
 
 /* Modal window */
 .backdrop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -298,9 +296,14 @@ a {
 }
 
 .modal {
-  position: relative;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
   width: 528px;
-  height: 581px;
+
   padding: 40px;
 
   background-color: #ffffff;
@@ -374,7 +377,7 @@ a {
 .register-form-message {
   width: 100%;
   padding: 10px;
-  padding-left: 30px;
+  padding-left: 42px;
   outline: transparent;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -400,6 +403,7 @@ a {
   left: 12px;
   fill: #212121;
 }
+
 
 textarea::placeholder {
   font-size: 12px;
