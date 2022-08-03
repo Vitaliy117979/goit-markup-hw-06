@@ -391,6 +391,10 @@ a {
   
 }
 
+.register-form-input:focus + .register-form-icon {
+fill:#2196f3;
+}
+
 .register-form-message {
   resize: none;
   height: 120px;
