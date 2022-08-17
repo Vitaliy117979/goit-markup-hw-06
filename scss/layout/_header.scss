@@ -11,15 +11,8 @@
   
   /* Логотип */
   .logo {
-    color: #000000;
-    margin-right: 93px;
-  }
-  
-  .header__logo--span {
     color: var(--blue-color);
-  }
-  
-  .header__logo {
+    
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     font-weight: 700;
@@ -27,6 +20,15 @@
     line-height: 1.2;
     letter-spacing: 0.03em;
   }
+
+  .header__logo {
+    margin-right: 93px;
+  }
+  
+  .logo__dark {
+    color: #000000;
+  }
+  
 
   /* Хедер-контакты  */
 

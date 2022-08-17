@@ -12,18 +12,8 @@
     margin-right: 70px;
   }
   
-  .footer__logo {
-    font-family: "Raleway", "Sans Serif";
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: var(--blue-color);
-   
-    &--span {
+  .logo__light {
       color: #ffffff;
-    }
   }
   
   
@@ -32,14 +22,7 @@
     font-style: normal;
   }
   
-  .address__list {
-    display: block;
-  }
-  
-  .address__list.list {
-    margin-bottom: 20px;
-  }
-  
+
   .address__residence {
     display: block;
   
@@ -47,11 +30,10 @@
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: #ffffff;
-  }
-  
-  .address__residence.residence {
     margin-bottom: 9px;
   }
+  
+ 
   
   .address--mail-tel {
     font-size: 14px;
@@ -69,9 +51,6 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ffffff;
-  }
-  
-  .second-conteiner__subtitle.subtitle {
     margin-bottom: 20px;
   }
   
@@ -120,7 +99,7 @@
     &:focus {
       background-color: var(--blue-color);
     }
-    
+
     &:hover {
       background-color: var(--blue-color);
     }

@@ -352,21 +352,21 @@ textarea::placeholder {
 
 /* Логотип */
 .logo {
-  color: #000000;
-  margin-right: 93px;
-}
-
-.header__logo--span {
   color: var(--blue-color);
-}
-
-.header__logo {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.logo__dark {
+  color: #000000;
 }
 
 /* Хедер-контакты  */
@@ -431,7 +431,7 @@ textarea::placeholder {
   gap: 50px;
 }
 
-.nav__item {
+.nav__link {
   position: relative;
   display: block;
   font-weight: 500;
@@ -444,13 +444,13 @@ textarea::placeholder {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav__item:focus {
+.nav__link:focus {
   color: var(--blue-color);
 }
-.nav__item:hover {
+.nav__link:hover {
   color: var(--blue-color);
 }
-.nav__item--stydio {
+.nav__link--accent {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -460,16 +460,16 @@ textarea::placeholder {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav__item--stydio:focus {
+.nav__link--accent:focus {
   color: var(--blue-color);
 }
-.nav__item--stydio:hover {
+.nav__link--accent:hover {
   color: var(--blue-color);
 }
-.nav__item--stydio::after {
+.nav__link--accent::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   display: block;
   width: 100%;
@@ -477,7 +477,7 @@ textarea::placeholder {
   border-radius: 2px;
   background-color: var(--blue-color);
 }
-.nav__item--portfolio {
+.nav__link--accent {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -487,16 +487,16 @@ textarea::placeholder {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav__item--portfolio:focus {
+.nav__link--accent:focus {
   color: var(--blue-color);
 }
-.nav__item--portfolio:hover {
+.nav__link--accent:hover {
   color: var(--blue-color);
 }
-.nav__item--portfolio::after {
+.nav__link--accent::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   display: block;
   width: 100%;
@@ -561,7 +561,7 @@ textarea::placeholder {
   padding-bottom: 0;
 }
 
-.features__item__svg {
+.features__wrapper {
   background-color: #f5f4fa;
   border-radius: 4px;
   width: 270px;
@@ -575,9 +575,6 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.features__item__svg.svg {
   margin-bottom: 30px;
 }
 
@@ -586,20 +583,17 @@ textarea::placeholder {
       flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
-.features__item__heading {
+.features__heading {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
-}
-
-.features__item__heading.heading {
   margin-bottom: 10px;
 }
 
-.features__item__text {
+.features__text {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -684,17 +678,11 @@ textarea::placeholder {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.list__people-item.item {
   padding-bottom: 30px;
 }
 
 .people-item__img {
   display: block;
-}
-
-.people-item__img.img {
   margin-bottom: 30px;
 }
 
@@ -705,9 +693,6 @@ textarea::placeholder {
   letter-spacing: 0.03em;
   color: #212121;
   text-align: center;
-}
-
-.people-item__name.name {
   margin-bottom: 10px;
 }
 
@@ -717,9 +702,6 @@ textarea::placeholder {
   letter-spacing: 0.03em;
   color: #757575;
   text-align: center;
-}
-
-.people-item__work.work {
   margin-bottom: 16px;
 }
 
@@ -745,7 +727,7 @@ textarea::placeholder {
 }
 
 .social-networks__item__svg {
-  fill: #AFB1B8;
+  fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -757,9 +739,6 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.portfolio__btn__list.list {
   gap: 8px;
   margin-bottom: 50px;
 }
@@ -774,6 +753,7 @@ textarea::placeholder {
   background-color: #f5f4fa;
   border-radius: 4px;
   cursor: pointer;
+  padding: 6px 22px;
   border: #f5f4fa;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -789,10 +769,6 @@ textarea::placeholder {
   background-color: var(--blue-color);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.portfolio__btn.btn {
-  padding: 6px 22px;
 }
 
 .portfolio__btn:hover {
@@ -814,9 +790,6 @@ textarea::placeholder {
       flex-wrap: wrap;
   --items: 3;
   --indent: 30px;
-}
-
-.portfolio__list.list {
   gap: 30px;
 }
 
@@ -872,9 +845,6 @@ textarea::placeholder {
 .portfolio__wrap {
   border: 1px solid #eeeeee;
   border-top: none;
-}
-
-.portfolio__wrap.wrap {
   padding: 20px 24px;
 }
 
@@ -891,16 +861,13 @@ textarea::placeholder {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.portfolio__overlay__cards:hover {
-  opacity: 1;
-}
-
-.portfolio__overlay__cards.cards {
   padding-top: 63px;
   padding-bottom: 63px;
   padding-left: 24px;
   padding-right: 24px;
+}
+.portfolio__overlay__cards:hover {
+  opacity: 1;
 }
 
 .overlay__cards__text {
@@ -917,9 +884,6 @@ textarea::placeholder {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-}
-
-.our-customers.customers {
   margin-bottom: 50px;
 }
 
@@ -1044,16 +1008,7 @@ textarea::placeholder {
   margin-right: 70px;
 }
 
-.footer__logo {
-  font-family: "Raleway", "Sans Serif";
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--blue-color);
-}
-.footer__logo--span {
+.logo__light {
   color: #ffffff;
 }
 
@@ -1062,23 +1017,12 @@ textarea::placeholder {
   font-style: normal;
 }
 
-.address__list {
-  display: block;
-}
-
-.address__list.list {
-  margin-bottom: 20px;
-}
-
 .address__residence {
   display: block;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: #ffffff;
-}
-
-.address__residence.residence {
   margin-bottom: 9px;
 }
 
@@ -1098,9 +1042,6 @@ textarea::placeholder {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-.second-conteiner__subtitle.subtitle {
   margin-bottom: 20px;
 }
 
